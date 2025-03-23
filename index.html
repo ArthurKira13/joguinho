@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/heart-1179072_1280.webp" />
+    <link rel="stylesheet" href="/index.css">
+    <title>Teste</title>
+
+<script>
+function toggleEnable(){
+  form.error().style.display = "block"
+
+}
+function toggleDisable(){
+  form.error().style.display = "none"
+  form.error().innerText = "PORQUE TA PASSANDO POR AQUI OUTRA VEZ?"
+  form.error().style.display = "none"
+}
+function toggleSad(){
+    form.error().innerText = "VOCÊ CLICOU... PORQUE ME ODEIA?!!! :( "
+}
+function toggleSad(element){
+    
+    element.classList.toggle("active");
+    form.present().style.display = "none"
+    form.hide().style.display = "none"
+    form.false().style.display = "none"
+    form.alert().style.display = "block"
+    
+}
+
+function toggleValidate(){
+ window.location.href = "./aeeee.html"
+}
+function toggleNext(){
+    form.valid().style.display = "block"
+}
+function toggleBefore(){
+    form.valid().innerText = "PORQUE NÃO CLICOU DA PRIMEIRA VEZ?"
+    form.valid().style.display = "none"
+}
+
+const form = {
+    error: () => document.getElementById("error"),
+    valid: () => document.getElementById("valid"),
+    hide: () => document.getElementById("hide"),
+    present: () => document.getElementById("present"),
+    false: ( ) => document.getElementById("false"),
+    alert: () => document.getElementById("alert"),
+    body: () => document.getElementById("body")
+}
+</script>
+
+</head>
+<body >
+    <div class="container" id="body">
+    <h1 id="hide">Você me ama?</h1>
+    <div class="container__options">
+    <button class="sim" id="present" onclick="toggleValidate(this)" onmouseenter="toggleNext()" onmouseleave="toggleBefore()">Sim</button>
+        <button class="nao" id="false" onmouseenter="toggleEnable()" onmouseleave="toggleDisable()" onclick="toggleSad(this)">Não</button>
+        <div class="alert" id="alert">  <p class="alertd">EU SABIA QUE VOCÊ NÃO ME AMAVA!!!!</p></div>
+    </div>   
+    <div class="error" id="error"> <p>MAIS UMA CHANCE...</p></div>
+    <div class="valid" id="valid"> <p>É SÓ CLICAR, HEHEHEHEEH</p></div>
+    </div>
+</body>
+</html>
+
+
